@@ -137,7 +137,9 @@ def check_guess(letter, word):
                 word_list[i] = letter
         word_blank = "".join(word_list)
 
-        safe=False,double = False,double_done = False
+        safe=False
+        double = False
+        double_done = False
 
         update_word_display()
         return True
@@ -178,9 +180,13 @@ def apply_wheel_consequence(result):
     global lives, word_blank, guessed_letters,safe, double, double_done
 
     if result == "Safe":
-        safe = True,double = False,double_done = False
+        safe = True
+        double = False
+        double_done = False
     elif result == "Double":
-        double = True,double_done = False,safe = False
+        double = True
+        double_done = False
+        safe = False
     elif result == "Death":
         lives = 0
         update_hangman_drawing(lives)
