@@ -1,5 +1,3 @@
-#PhotoImageis bridge between tkinter and PIL
-
 from tkinter import ttk
 from tkinter import Canvas
 from tkinter import messagebox
